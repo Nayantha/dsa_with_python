@@ -14,7 +14,7 @@ class LinkedList:
 
     def print(self):
         current_node: Node = self.head
-        while current_node:
+        while current_node.next_node:
             print(current_node.data, end=" -> ")
             current_node = current_node.next_node
-        print("None")
+        print(current_node.data)
