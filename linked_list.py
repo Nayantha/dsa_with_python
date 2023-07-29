@@ -5,7 +5,7 @@ class Node:
 
 class LinkedList:
     def __init__(self):
-        self.head = None
+        self.head: Node | None = None
 
     def insert_at_start(self, data):
         new_node = Node(data)
