@@ -8,6 +8,6 @@ class LinkedList:
         self.head: Node | None = None
 
     def insert_at_start(self, data):
-        new_node = Node(data)
+        new_node: Node = Node(data)
         new_node.next_node = self.head
         self.head = new_node
