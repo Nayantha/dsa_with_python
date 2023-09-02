@@ -13,3 +13,4 @@ unsorted_array = array
 for index, number in enumerate(array):
     ...
 unsorted_array.sort()
+assert array == unsorted_array
