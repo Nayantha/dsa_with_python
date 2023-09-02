@@ -8,14 +8,14 @@
 #         }
 #         arr[j+1] = key;
 #     }
-def insertion_sort(array: list[int]):
-    for index in range(1, len(array)):
-        number = array[index]
+def insertion_sort(array_to_be_sorted: list[int]):
+    for index in range(1, len(array_to_be_sorted)):
+        number = array_to_be_sorted[index]
         search_index = index - 1
-        while search_index >= 0 and number < array[search_index]:
+        while search_index >= 0 and number < array_to_be_sorted[search_index]:
             search_index -= 1
-        array[index] = array[search_index + 1]
-        array[search_index + 1] = number
+        array_to_be_sorted[index] = array_to_be_sorted[search_index + 1]
+        array_to_be_sorted[search_index + 1] = number
 
 
 array = [20, 10, 5, 35, 45, 6, 12, 15, 25, 50, 7]
