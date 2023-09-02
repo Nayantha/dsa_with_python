@@ -8,12 +8,6 @@
 #         }
 #         arr[j+1] = key;
 #     }
-array = [20, 10, 5, 35, 45, 6, 12, 15, 25, 50, 7]
-unsorted_array = array
-unsorted_array.sort()
-assert array == unsorted_array
-
-
 def insertion_sort(array: list[int]):
     for index in range(1, len(array)):
         number = array[index]
@@ -22,3 +16,10 @@ def insertion_sort(array: list[int]):
             search_index -= 1
         array[index] = array[search_index + 1]
         array[search_index + 1] = number
+
+
+array = [20, 10, 5, 35, 45, 6, 12, 15, 25, 50, 7]
+unsorted_array = array
+insertion_sort(array)
+unsorted_array.sort()
+assert array == unsorted_array
