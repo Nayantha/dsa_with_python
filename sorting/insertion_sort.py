@@ -15,11 +15,4 @@ def insertion_sort(array_to_be_sorted: list[int]):
                 and array_to_be_sorted[index] < array_to_be_sorted[search_index]:
             search_index -= 1
         array_to_be_sorted[index], array_to_be_sorted[search_index + 1] = array_to_be_sorted[search_index + 1], \
-        array_to_be_sorted[index]
-
-
-array = [20, 10, 5, 35, 45, 6, 12, 15, 25, 50, 7]
-unsorted_array = array
-insertion_sort(array)
-unsorted_array.sort()
-assert array == unsorted_array
+            array_to_be_sorted[index]
