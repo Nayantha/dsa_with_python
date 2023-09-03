@@ -1,4 +1,5 @@
 from sorting.insertion_sort import insertion_sort
+from sorting.selection_sort import selection_sort
 
 
 def sorting_algorithm_test(sorting_algorithm):
@@ -11,3 +12,7 @@ def sorting_algorithm_test(sorting_algorithm):
 
 def test_insertion_sort():
     sorting_algorithm_test(insertion_sort)
+
+
+def test_selection_sort():
+    sorting_algorithm_test(selection_sort)
