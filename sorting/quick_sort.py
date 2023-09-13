@@ -1,2 +1,2 @@
-
-
+def quick_sort(array: list[int]):
+    ...
