@@ -1,18 +1,13 @@
-def partition(arr: list[int], left_pointer: int, right_pointer: int):
-    pivot_element = arr[right_pointer]
-    pivot_element_index = right_pointer
-    while True:
-        while pivot_element >= arr[left_pointer] and left_pointer < right_pointer:
-            left_pointer += 1
-        if left_pointer >= right_pointer:
-            break
-        while pivot_element < arr[right_pointer] and left_pointer < right_pointer:
-            right_pointer -= 1
-        if left_pointer >= right_pointer:
-            break
-        arr[left_pointer], arr[right_pointer] = arr[right_pointer], arr[left_pointer]
-    arr[pivot_element_index], arr[left_pointer] = arr[left_pointer], arr[pivot_element_index]
-    return left_pointer
+def partition(arr: list[int], low: int, high: int):
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] < pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i+1], arr[high] = arr[high], arr[i+1]
+    return i+1
+
 
 def quick_sort(array: list[int], first_index, last_index: int):
     if first_index > last_index:
