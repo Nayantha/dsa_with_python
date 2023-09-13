@@ -16,3 +16,10 @@ def test_insertion_sort():
 
 def test_selection_sort():
     sorting_algorithm_test(selection_sort)
+
+def test_quick_sort():
+    array = [20, 10, 5, 35, 45, 6, 12, 15, 25, 50, 7]
+    unsorted_array = array
+    quick_sort(array)
+    unsorted_array.sort()
+    assert array == unsorted_array
