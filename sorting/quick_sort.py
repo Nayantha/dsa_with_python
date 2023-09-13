@@ -11,8 +11,9 @@ def partition(arr: list[int], left_pointer: int, right_pointer: int):
         if left_pointer >= right_pointer:
             break
         arr[left_pointer], arr[right_pointer] = arr[right_pointer], arr[left_pointer]
-    arr[pivot_element_index], arr[left_pointer] = arr[left_pointer],arr[pivot_element_index]
+    arr[pivot_element_index], arr[left_pointer] = arr[left_pointer], arr[pivot_element_index]
     return left_pointer
 
-def quick_sort(array: list[int]):
-    ...
+def quick_sort(array: list[int], first_index=0, last_index: int):
+    if first_index < last_index:
+        return
