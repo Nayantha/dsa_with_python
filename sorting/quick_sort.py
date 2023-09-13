@@ -15,7 +15,7 @@ def partition(arr: list[int], left_pointer: int, right_pointer: int):
     return left_pointer
 
 def quick_sort(array: list[int], first_index, last_index: int):
-    if first_index < last_index:
+    if first_index > last_index:
         return
     partition_index = partition(array, first_index, last_index)
     quick_sort(array, first_index=first_index, last_index=partition_index - 1)
